@@ -35,13 +35,9 @@
 yarn-debug.log*
 .yarn-integrity
 
-# These might not be important
-/config/local_env.yml
+# This might not be used
 .env
-cred.json
 
 # Ignore application configuration
 /config/application.yml
 /config/config.json
-config/cred.json
-config/cred.json
