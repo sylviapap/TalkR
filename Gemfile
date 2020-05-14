@@ -67,3 +67,4 @@ gem "google-cloud"
 gem "gcloud"
 gem 'faker'
 gem 'figaro'
+gem 'bundler'
