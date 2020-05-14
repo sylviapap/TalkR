@@ -1,5 +1,5 @@
 translator = Google::Cloud::Translate.new version: :v2, project_id: ENV["CLOUD_PROJECT_ID"]
-    # the "en" returns all of the api's possible languages in english, so the drop down menu choices are all in english, i.e. you choose 'spanish' not 'espanol' but the 2 letter codes are always the same
+    # the "en" returns list of languages in english, so the drop down menu choices are all in english, i.e. you choose 'spanish' not 'espanol' but the 2 letter codes are always the same
 languages = translator.languages "en"
 languages.each { |lang| Language.find_or_create_by(name: lang.name, code: lang.code)}
 
