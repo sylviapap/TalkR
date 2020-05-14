@@ -12,6 +12,6 @@ class Chat < ApplicationRecord
     end
 
     def translator
-        Google::Cloud::Translate.new version: :v2, project_id: ENV["CLOUD_PROJECT_ID"]
+        translate = Google::Cloud::Translate.new version: :v2, project_id: ENV["CLOUD_PROJECT_ID"]
     end
 end
