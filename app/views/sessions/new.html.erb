@@ -1,13 +1,24 @@
+<div class="blue-bkg">
 <%= flash[:error] %>
 
-<h1>Log In</h1>
+  <h1 class="form-title">Log In</h1>
 
-<%= form_with(url: '/login') do |f| %>
+  <div class="user-form">
+  <%= form_with(url: '/login') do |f| %>
+    <div class="form-group">
+    <%= f.text_field :email, placeholder: "Email", class: "form-control" %>
+    </div>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.submit 'Log In'%>
+    <div class="form-group">
+    <%= f.password_field :password,placeholder: "Password", class: "form-control" %>
+    </div>
 
-<% end %>
+    <%= f.submit 'Log In', :class => 'btn btn-primary btn-lg btn-block' %>
+
+  <% end %>
+  </div>
+
+  <div class="text-center" id="login">
+    <p style="color: white">Need an account? <strong><%= link_to 'Sign Up', register_path %></p>
+  </div>
+</div>

@@ -2,14 +2,14 @@
 
 <div class="blue-bkg">
   <% if flash[:no_user] %>
-      <p><%= flash[:no_user] %></p>
+      <span style="color: white"><%= flash[:no_user] %></span>
   <% end %>
 
   <h1 class="form-title">Sign Up</h1>
 
   <% if @user.errors.any? %>
     <% @user.errors.full_messages.each do |e| %>
-      <p><%= e %></p>
+      <span style="color: white"><%= e %></span>
     <% end %>
   <% end %>
   <div class="user-form">
