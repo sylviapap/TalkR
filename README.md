@@ -1,7 +1,19 @@
-# Flatiron Mod 2 Group Project - Rails Google Translate Chat App
+# Flatiron Mod 2 Group Project
+
+## Ruby on Rails, Google Cloud Translation API Chat Application
+
+Built/deployed using:
+- bcrypt
+- sessions
+- Bootstrap
+- postgres
+- Heroku
+- figaro
 
 Original repo: https://github.com/austinoso/TalkR
 
-Live site: https://translation-chat-app.herokuapp.com/
+Project partners:
+- https://github.com/austinoso
+- https://github.com/JABermudez11
 
-* Please note - you must click 'New Chat' and make a new 'Chat' before sending a message
+Live site: https://translation-chat-app.herokuapp.com/
