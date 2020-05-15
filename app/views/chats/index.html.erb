@@ -18,6 +18,17 @@
             <% if @chat.owner_id == session[:user_id] && @chat %>
                 <span><%= link_to "Edit Chat", edit_chat_path(@chat) %></span>
             <% end %>
+                <div id="message-form">
+        <%= form_with url: messages_path do |f| %>
+            <div class="form-group">
+                <%= f.text_area :content, placeholder: "Send Message", :class => 'form-control' %>
+                <%= f.hidden_field :user_id %>
+                <%= f.hidden_field :chat_id %>
+                <%= f.submit "Send", :class => 'btn btn-primary mb-2' %>
+            </div>
+        <% end %>
+
+    </div>
         <% end %>
         </p>
     </div>
@@ -34,16 +45,6 @@
         <% end if @messages %>
     </div>
 
-    <div id="message-form">
-        <%= form_with url: messages_path do |f| %>
-            <div class="form-group">
-                <%= f.text_area :content, placeholder: "Send Message", :class => 'form-control' %>
-                <%= f.hidden_field :user_id %>
-                <%= f.hidden_field :chat_id %>
-                <%= f.submit "Send", :class => 'btn btn-primary mb-2' %>
-            </div>
-        <% end %>
 
-    </div>
 </div>
 

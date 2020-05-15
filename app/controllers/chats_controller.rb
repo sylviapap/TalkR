@@ -36,6 +36,7 @@ class ChatsController < ApplicationController
 
     def destroy
         @chat.destroy
+        session[:chat_view_id].destroy
         redirect_to chats_path
     end
 
