@@ -15,21 +15,25 @@
  */
 
 
- .blue-bkg {
+.blue-bkg {
     background-color: #1E4565;
     min-height: 100vh;
- }
+}
 
- .text-center {
-     text-align: center;
- }
+.text-center {
+    text-align: center;
+}
 
- .form-title {
-     color: white;
-     text-align: center;
-     padding: 40px;
- }
+.form-title {
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
 
- .page {
-     padding: 20px;
- }
+.page {
+    padding: 20px;
+}
+
+#btn-margin {
+    margin: 5%;
+}
