@@ -30,6 +30,7 @@
     <%= f.label :language_id, "Your Preferred Language:" %>
     <%= f.collection_select :language_id, Language.all, :id, :name, {:prompt => "Select a Language"}, class: "form-control" %>
   </div>
+    <%= f.submit "Submit", class: 'btn btn-primary btn-block', id: "btn-margin" %>
   <% end %>
-  <%= link_to "Delete Account", @user, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-block" %>
+  <%= link_to "Delete Account", @user, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-block", id: "btn-margin" %>
 </div>
