@@ -1,24 +1,5 @@
-# README
+# Flatiron Mod 2 Group Project - Rails Google Translate Chat App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Original repo: https://github.com/austinoso/TalkR
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Live site: https://translation-chat-app.herokuapp.com/
