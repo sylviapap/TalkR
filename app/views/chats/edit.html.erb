@@ -2,22 +2,18 @@
     <h1>Edit Chat</h1>
 
     <%= form_for @chat do |f| %>
+    <div class="form-group">
         <%= f.hidden_field :owner_id %>
-        <%= f.label "Custom Chat Name"%>
-        <%= f.text_field :name %>
+        <%= f.label :name, "Custom Chat Name"%>
+        <%= f.text_field :name, class: "form-control" %>
+        </div>
         <%= f.submit "Save Changes", class: "btn btn-primary btn-sm" %>
     <% end %>
-
-    <%= link_to "Back to chat (changes won't save)", @chat %>
-
-    <h1>Current Users</h1>
-
-    <% @current_users.each do |user| %>
-        <%= link_to user.name, user %>
-        <%= link_to 'Remove User', remove_user_path(id: @chat.id, user_id: user.id), class: "btn btn-danger btn-sm" %>
-    <% end %>
+<br>
+    <%= link_to "Back to Chats", @chat, class: "btn btn-primary btn-sm" %>
 
     <h1>Add Users</h1>
+    <span>(Users must be in your contacts to appear here)</span>
 
 
     <% current_user.contacts.each do |user| %>
@@ -26,7 +22,6 @@
             <%= link_to "Add to Chat", add_user_path(id: @chat.id, user_id: user.id), class: "btn btn-primary btn-sm" %>
         </div>
     <% end %>
-
-    <p><%= link_to "delete chat", @chat, method: :delete %></p>
-
+<br>
+    <%= link_to "Delete Chat", @chat, method: :delete, class: "btn btn-danger btn-lg", style: "margin: 2%; width: 50%; float: right" %>
 </div>

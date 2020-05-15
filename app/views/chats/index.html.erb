@@ -14,9 +14,10 @@
     </div>
     <div class=chat-info>
         <% if !!@chat %>
-        <p><%= @chat.chat_name if @chat %>
+        <p>Current Channel: <%= @chat.chat_name if @chat %>
             <% if @chat.owner_id == session[:user_id] && @chat %>
-                <span><%= link_to "Edit Chat", edit_chat_path(@chat) %></span>
+            <br>
+                <span><%= link_to "Chat Settings", edit_chat_path(@chat) %></span>
             <% end %>
                 <div id="message-form">
         <%= form_with url: messages_path do |f| %>
